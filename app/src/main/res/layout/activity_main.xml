@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/bgColor"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    >
+    <!-- android:orientation = "vertical" this makes the content go down vertically instead of side-by-side  -->
+    <!-- android:background = "{color}" changing the background color -->
+    <!-- android:gravity ="center_horizontal this make the content center to the middle -->
+    <!-- Creating the text label "CALCULATE YOUR"    -->
+    <!-- Android Studio "sp" stand for scalable pixel -->
+    <!-- android:layout_margin allows a certain distance to the Top(android:layout_marginTop),Bottom(android:layout_marginBottom),
+        Left-side(android:layout_marginLeft) or Right_side(android:layout_marginRight) etc. -->
+    <!-- warp_content warp the contents from the length of the word -->
+    <!-- match_parent warp the contents from the parent layouts of the applications -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:text="CALCULATE YOUR"
+        android:textColor="@color/textBlue"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:text="AGE"
+        android:background="@color/textBlue"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:padding="10dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:text="IN MINUTES"
+        android:textColor="@color/textBlue"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16sp"
+    android:text="Selected Date: "
+    android:textColor="@color/textBlue"
+    android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvSelectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:text="Date"
+        android:textColor="@color/textBlue"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:text="The amount of minutes till date: "
+        android:textColor="@color/textBlue"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvMinSinceDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:text="Minutes"
+        android:textColor="@color/textBlue"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/btnDatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Here"
+        android:textSize="25sp"
+        android:layout_marginTop="250dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/textBlue"
+        android:backgroundTint="@color/bgColorGray"
+        />
+</LinearLayout>

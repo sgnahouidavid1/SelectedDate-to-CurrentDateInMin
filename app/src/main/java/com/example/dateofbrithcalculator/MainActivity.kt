@@ -59,11 +59,11 @@ class MainActivity : AppCompatActivity() {
                 val theDate = sdf.parse(selectedDate) // this will be use to calculate the time that has passed since the date
                 // fixing theDate type safety:
                 theDate?.let{ // if theDate is not empty run the below code
-                    val selectDateInMinutes = theDate.time / 6000 // we use .time to just the time a the date that is located within
+                    val selectDateInMinutes = theDate.time / 60000 // we use .time to just the time a the date that is located within
                     // (.time use here returns the millisecond of Jan 01 1970 and certain date, and to get the minutes since that date, we must divide the time by 6000 to get the time in minutes from Jan 01 1970 to selected Date.)
                     val currentDate = sdf.parse(sdf.format(System.currentTimeMillis())) // this will give me the time that has passed since Jan 01 1970 and present date  in millisecond
                     currentDate?.let{ // run if current date is not empty.
-                        val currentDateInMinutes = currentDate.time / 6000
+                        val currentDateInMinutes = currentDate.time / 60000
                         val CalDifferenceInMinutes = currentDateInMinutes - selectDateInMinutes // this will give out the difference between the selected date and the current/present one.
                         tvMinSinceDate?.text = "${CalDifferenceInMinutes.toString()} minutes " // CalDifferenceInMinutes is type long so we use .toString() to convert
                         // CalDifferenceInMinutes from a long type to a string type.
